@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>010101</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+		
+        html, body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #933838;
+            font-family: Arial, sans-serif;
+        }
+		
+        button {
+            width: 100vw;
+            height: 100vh;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #933838;
+            color: white;
+        }
+		
+        button:active {
+            background-color: #933838;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="toggleText()">Включить звук</button>
+    <audio id="audio" loop>
+        <source src="https://www.myinstants.com/media/sounds/eshchio-raz-pozvonish-ubiu-nafek.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById("audio");
+        const button = document.querySelector("button");
+
+        function toggleText() {
+            if (button.textContent === "Включить звук") {
+                button.textContent = "Отключить звук";
+                audio.play();
+            } else {}
+        }
+    </script>
+
+</body>
+</html>
